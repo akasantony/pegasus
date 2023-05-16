@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+  <include file="$(find endeffectortool)/launch/gazebo_end.launch"/>
+  <include file="$(find srsmodule)/launch/gazebo_srs.launch"/>
+</launch>

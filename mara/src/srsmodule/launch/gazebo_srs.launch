@@ -1,0 +1,20 @@
+<launch>
+
+  <node
+    name="tf_footprint"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" />
+  <node
+    name="spawn"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find srsmodule)/urdf/srsmodule.urdf -urdf -model srsmodule"
+    output="screen" />
+  <node
+    name="fake_joint"
+    pkg="rostopic"
+    type="rostopic"
+    args="pub /calibrated std_msgs/Bool true" />
+   <arg name="srs_world" default="$(find endeffectortool)/worlds/my_world.world"/>
+</launch>

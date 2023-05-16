@@ -1,0 +1,37 @@
+controller_list:
+  - name: fake_fulllbot_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - virtual_joint
+  - name: fake_arm_up_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint1_up
+      - joint2_up
+      - joint3_up
+      - joint4_up
+      - joint5_up
+      - joint6_up
+  - name: fake_arm_right_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint1_right
+      - joint2_right
+      - joint3_right
+      - joint4_right
+      - joint5_right
+      - joint6_right
+  - name: fake_arm_left_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint1_left
+      - joint2_left
+      - joint3_left
+      - joint4_left
+      - joint5_left
+      - joint6_left
+initial:  # Define initial robot poses per group
+#  - group: fulllbot
+#    pose: home
+
+  []

@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/likith/mara/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/likith/catkin_ws/devel/include/**",
+        "/home/likith/catkin_ws/src/xarm_ros/xarm_api/include/**",
+        "/home/likith/catkin_ws/src/xarm_ros/xarm_controller/include/**",
+        "/home/likith/catkin_ws/src/xarm_ros/xarm_moveit_servo/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

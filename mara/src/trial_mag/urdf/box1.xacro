@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="box1">
+
+  <!-- Define the first box -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/box1</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+
+  <xacro:property name="box1_x" value="1.0"/>
+  <xacro:property name="box1_y" value="0.0"/>
+  <xacro:property name="box1_z" value="0.5"/>
+
+  <link name="world"/> 
+  
+  <link name="box1_link">
+    <visual>
+      <origin xyz="${box1_x} ${box1_y} ${box1_z}" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 1 1"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="${box1_x} ${box1_y} ${box1_z}" rpy="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia
+	  ixx="0.0" ixy="0.0" ixz="0.0"
+	  iyy="0.0" iyz="0.0"
+	  izz="0.0"/>
+    </inertial>
+  </link>
+
+  <joint name="box1_joint" type="continuous">
+    <parent link="world"/>
+    <child link="box1_link"/>
+  </joint>
+
+</robot>

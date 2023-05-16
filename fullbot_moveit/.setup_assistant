@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: fullbot
+    relative_path: urdf/fullbot.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/fullbot.srdf
+  CONFIG:
+    author_name: Akas Antony
+    author_email: antony.akas@gmail.com
+    generated_timestamp: 1681917428

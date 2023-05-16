@@ -1,0 +1,7 @@
+string model_name
+string link_name
+float32 dipole_x
+float32 dipole_y
+float32 dipole_z
+---
+bool status

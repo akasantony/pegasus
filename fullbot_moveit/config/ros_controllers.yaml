@@ -1,0 +1,159 @@
+fullbot_armup_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - joint1_up
+    - joint2_up
+    - joint3_up
+    - joint4_up
+    - joint5_up
+    - joint6_up
+  gains:
+    joint1_up:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint2_up:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint3_up:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint4_up:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint5_up:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint6_up:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+fullbot_armleft_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - joint1_left
+    - joint2_left
+    - joint3_left
+    - joint4_left
+    - joint5_left
+    - joint6_left
+  gains:
+    joint1_left:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint2_left:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint3_left:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint4_left:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint5_left:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint6_left:
+      p: 100
+      d: 50
+      i: 1
+      i_clamp: 1
+fullbot_armright_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - joint1_right
+    - joint2_right
+    - joint3_right
+    - joint4_right
+    - joint5_right
+    - joint6_right
+  gains:
+    joint1_right:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint2_right:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint3_right:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint4_right:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint5_right:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint6_right:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+
+wheel_bl_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: youbot__wheel_joint_bl
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+fullbot_wheel_controller:
+  type: "diff_drive_controller/DiffDriveController"
+  left_wheel: 'left_wheel_joint'
+  right_wheel: 'right_wheel_joint'
+  pose_covariance_diagonal: [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
+  twist_covariance_diagonal: [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
+  base_frame_id: base_link
+
+  # Odometry fused with IMU is published by robot_localization, so
+  # no need to publish a TF based on encoders alone.
+  enable_odom_tf: false
+
+  # Husky hardware provides wheel velocities
+  estimate_velocity_from_position: false
+
+  # Wheel separation and radius multipliers
+  wheel_separation_multiplier: 1.875 # default: 1.0
+  wheel_radius_multiplier    : 1.0 # default: 1.0
+
+  # Velocity and acceleration limits
+  # Whenever a min_* is unspecified, default to -max_*
+  linear:
+      x:
+          has_velocity_limits    : true
+          max_velocity           : 1.0   # m/s
+          has_acceleration_limits: true
+          max_acceleration       : 3.0   # m/s^2
+  angular:
+      z:
+          has_velocity_limits    : true
+          max_velocity           : 2.0   # rad/s
+          has_acceleration_limits: true
+  max_acceleration       : 6.0 # rad/s^2

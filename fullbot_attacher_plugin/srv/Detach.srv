@@ -1,0 +1,4 @@
+string detach_model
+string detach_joint
+---
+bool status

@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- A testing model that includes the Velodyne sensor model -->
+    <model name="object_link">
+		<link name="object_link">
+		<pose>0 0 0.25 0 0 0</pose>
+		<collision name="object_link_collision">
+			<pose>0 0 0 0 0 0</pose>
+			<geometry>
+			<box>
+				<size>0.5 0.5 0.5</size>
+			</box>
+			</geometry>
+		</collision>
+		<visual name="object_link_visual">
+		<pose>0 0 0 0 0 0</pose>
+			<geometry>
+			<box>
+				<size>0.5 0.5 0.5</size>
+			</box>
+			</geometry>
+		</visual>
+		</link>
+
+      <!-- Attach the plugin to this model -->
+    </model>
+	<model name="object_link2">
+	<link name="object_link2">
+	<pose>3.5 0 0.25 0 0 0</pose>
+	<collision name="object_link_collision2">
+		<pose>0 0 0 0 0</pose>
+		<geometry>
+		<box>
+			<size>0.5 0.5 0.5</size>
+		</box>
+		</geometry>
+	</collision>
+	<visual name="object_link_visual2">
+	<pose>0 0 0 0 0 0</pose>
+		<geometry>
+		<box>
+			<size>0.5 0.5 0.5</size>
+		</box>
+		</geometry>
+	</visual>
+	</link>
+
+	<!-- Attach the plugin to this model -->
+    </model>
+	<model name="object_link3">
+	<link name="object_link3">
+	<pose>6.5 0 0.25 0 0 0</pose>
+	<collision name="object_link_collision3">
+		<pose>0 0 0 0 0</pose>
+		<geometry>
+		<box>
+			<size>0.5 0.5 0.5</size>
+		</box>
+		</geometry>
+	</collision>
+	<visual name="object_link_visual3">
+	<pose>0 0 0 0 0 0</pose>
+		<geometry>
+		<box>
+			<size>0.5 0.5 0.5</size>
+		</box>
+		</geometry>
+	</visual>
+	</link>
+	<link name="world"/>
+
+	<!-- Attach the plugin to this model -->
+    </model>
+	
+	<plugin name="velodyne_control" filename="libfullbot_plugin.so"/>
+  </world>
+</sdf>

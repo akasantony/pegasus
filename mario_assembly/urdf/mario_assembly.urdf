@@ -1,0 +1,1404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mario_assembly">
+  <link
+    name="mainbaselink">
+    <inertial>
+      <origin
+        xyz="0.0013006 0.0028181 0.90172"
+        rpy="0 0 0" />
+      <mass
+        value="70.837" />
+      <inertia
+        ixx="2.0746"
+        ixy="3.0942E-10"
+        ixz="-7.7853E-10"
+        iyy="3.5026"
+        iyz="-0.0003362"
+        izz="1.815" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/mainbaselink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/mainbaselink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link0up">
+    <inertial>
+      <origin
+        xyz="0.0013425 0.00067055 0.073474"
+        rpy="0 0 0" />
+      <mass
+        value="1.1698" />
+      <inertia
+        ixx="0.0031913"
+        ixy="-4.0011E-05"
+        ixz="7.2685E-05"
+        iyy="0.0032548"
+        iyz="3.6295E-05"
+        izz="0.0015021" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link0up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link0up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint0up"
+    type="fixed">
+    <origin
+      xyz="0 -1.2629 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="mainbaselink" />
+    <child
+      link="link0up" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link1up">
+    <inertial>
+      <origin
+        xyz="0.00021271 0.0073927 0.085089"
+        rpy="0 0 0" />
+      <mass
+        value="1.3256" />
+      <inertia
+        ixx="0.0039077"
+        ixy="-3.0453E-06"
+        ixz="-7.4554E-06"
+        iyy="0.0032369"
+        iyz="-0.00041283"
+        izz="0.0021922" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link1up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link1up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1up"
+    type="revolute">
+    <origin
+      xyz="0 0 0.1548"
+      rpy="0 0 0" />
+    <parent
+      link="link0up" />
+    <child
+      link="link1up" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.283"
+      upper="6.283"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link2up">
+    <inertial>
+      <origin
+        xyz="0.013528 -0.16642 -0.048713"
+        rpy="0 0 0" />
+      <mass
+        value="2.6935" />
+      <inertia
+        ixx="0.015114"
+        ixy="0.0028282"
+        ixz="-0.00014159"
+        iyy="0.0043522"
+        iyz="-0.00072817"
+        izz="0.015671" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link2up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link2up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2up"
+    type="revolute">
+    <origin
+      xyz="0.00034899 0.075295 0.112"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link1up" />
+    <child
+      link="link2up" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.059"
+      upper="2.094"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link3up">
+    <inertial>
+      <origin
+        xyz="0.063373 0.081477 -0.029861"
+        rpy="0 0 0" />
+      <mass
+        value="1.3025" />
+      <inertia
+        ixx="0.0052822"
+        ixy="-0.0012908"
+        ixz="0.00090165"
+        iyy="0.0038842"
+        iyz="0.0016205"
+        izz="0.0044896" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link3up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link3up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3up"
+    type="revolute">
+    <origin
+      xyz="0.053313 -0.2859 -0.0083026"
+      rpy="0 0 0" />
+    <parent
+      link="link2up" />
+    <child
+      link="link3up" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.926"
+      upper="0.192"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link4up">
+    <inertial>
+      <origin
+        xyz="0.00027015 0.032423 0.10205"
+        rpy="0 0 0" />
+      <mass
+        value="0.78957" />
+      <inertia
+        ixx="0.0043745"
+        ixy="3.6089E-06"
+        ixz="2.6054E-06"
+        iyy="0.0039417"
+        iyz="-0.00089192"
+        izz="0.0010384" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link4up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link4up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4up"
+    type="revolute">
+    <origin
+      xyz="0.077751 0.16917 -0.067495"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link3up" />
+    <child
+      link="link4up" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.283"
+      upper="6.283"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link5up">
+    <inertial>
+      <origin
+        xyz="0.048685 0.011108 0.013355"
+        rpy="0 0 0" />
+      <mass
+        value="0.72305" />
+      <inertia
+        ixx="0.00084167"
+        ixy="-0.00021771"
+        ixz="0.00027647"
+        iyy="0.0014545"
+        iyz="7.2752E-05"
+        izz="0.0016684" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link5up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link5up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link5up"
+    type="revolute">
+    <origin
+      xyz="0.00043612 0.0047483 0.173"
+      rpy="1.5708 0 0" />
+    <parent
+      link="link4up" />
+    <child
+      link="link5up" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.69"
+      upper="3.142"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link6up">
+    <inertial>
+      <origin
+        xyz="0.0013911 -8.5874E-09 0.027547"
+        rpy="0 0 0" />
+      <mass
+        value="0.22107" />
+      <inertia
+        ixx="0.00010302"
+        ixy="1.1044E-12"
+        ixz="-4.5584E-07"
+        iyy="0.00011538"
+        iyz="2.4475E-11"
+        izz="0.00019334" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link6up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link6up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6up"
+    type="revolute">
+    <origin
+      xyz="0.076 0.0685 0.0043389"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link5up" />
+    <child
+      link="link6up" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.283"
+      upper="6.283"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link0left">
+    <inertial>
+      <origin
+        xyz="0.0013425 0.00067055 0.073474"
+        rpy="0 0 0" />
+      <mass
+        value="1.1698" />
+      <inertia
+        ixx="0.0031913"
+        ixy="-4.0011E-05"
+        ixz="7.2686E-05"
+        iyy="0.0032548"
+        iyz="3.6295E-05"
+        izz="0.0015021" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link0left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link0left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint0left"
+    type="fixed">
+    <origin
+      xyz="-0.2625 -0.80825 0"
+      rpy="1.5708 0 -2.0944" />
+    <parent
+      link="mainbaselink" />
+    <child
+      link="link0left" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link1left">
+    <inertial>
+      <origin
+        xyz="-0.47036 0.0073924 -0.72922"
+        rpy="0 0 0" />
+      <mass
+        value="1.3256" />
+      <inertia
+        ixx="0.0026145"
+        ixy="0.00035901"
+        ixz="-0.00073909"
+        iyy="0.003237"
+        iyz="0.00020378"
+        izz="0.0034853" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link1left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link1left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1left"
+    type="revolute">
+    <origin
+      xyz="0.39656 0 -0.53206"
+      rpy="3.1416 1.0472 3.1416" />
+    <parent
+      link="link0left" />
+    <child
+      link="link1left" />
+    <axis
+      xyz="0.86603 0 0.5" />
+    <limit
+      lower="-6.283"
+      upper="6.283"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link2left">
+    <inertial>
+      <origin
+        xyz="0.013528 -0.16642 -0.048713"
+        rpy="0 0 0" />
+      <mass
+        value="2.6935" />
+      <inertia
+        ixx="0.015114"
+        ixy="0.0028282"
+        ixz="-0.00014158"
+        iyy="0.0043521"
+        iyz="-0.00072816"
+        izz="0.015671" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link2left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link2left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2left"
+    type="revolute">
+    <origin
+      xyz="-0.49373 0.075295 -0.74256"
+      rpy="1.5708 -1.0472 -3.1416" />
+    <parent
+      link="link1left" />
+    <child
+      link="link2left" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.059"
+      upper="2.094"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link3left">
+    <inertial>
+      <origin
+        xyz="0.063373 0.081477 -0.029861"
+        rpy="0 0 0" />
+      <mass
+        value="1.3025" />
+      <inertia
+        ixx="0.0052822"
+        ixy="-0.0012908"
+        ixz="0.00090165"
+        iyy="0.0038842"
+        iyz="0.0016205"
+        izz="0.0044896" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link3left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link3left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3left"
+    type="revolute">
+    <origin
+      xyz="0.053313 -0.2859 -0.0083026"
+      rpy="0 0 0" />
+    <parent
+      link="link2left" />
+    <child
+      link="link3left" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.926"
+      upper="0.192"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link4left">
+    <inertial>
+      <origin
+        xyz="0.0002699 0.032423 0.10205"
+        rpy="0 0 0" />
+      <mass
+        value="0.78956" />
+      <inertia
+        ixx="0.0043745"
+        ixy="3.6133E-06"
+        ixz="2.6058E-06"
+        iyy="0.0039417"
+        iyz="-0.00089191"
+        izz="0.0010383" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link4left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link4left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4left"
+    type="revolute">
+    <origin
+      xyz="0.077751 0.16917 -0.067495"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link3left" />
+    <child
+      link="link4left" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.283"
+      upper="6.283"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link5left">
+    <inertial>
+      <origin
+        xyz="0.048685 0.011108 0.013355"
+        rpy="0 0 0" />
+      <mass
+        value="0.72305" />
+      <inertia
+        ixx="0.00084167"
+        ixy="-0.00021775"
+        ixz="0.00027647"
+        iyy="0.0014546"
+        iyz="7.2753E-05"
+        izz="0.0016685" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link5left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link5left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5left"
+    type="revolute">
+    <origin
+      xyz="0.00043612 0.0047483 0.173"
+      rpy="1.5708 0 0" />
+    <parent
+      link="link4left" />
+    <child
+      link="link5left" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.69"
+      upper="3.142"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link6left">
+    <inertial>
+      <origin
+        xyz="0.0013911 -8.883E-09 0.027547"
+        rpy="0 0 0" />
+      <mass
+        value="0.22107" />
+      <inertia
+        ixx="0.00010302"
+        ixy="-8.5156E-12"
+        ixz="-4.5586E-07"
+        iyy="0.00011538"
+        iyz="2.1447E-11"
+        izz="0.00019334" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link6left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link6left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6left"
+    type="revolute">
+    <origin
+      xyz="0.076 0.0685 0.0043389"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link5left" />
+    <child
+      link="link6left" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.283"
+      upper="6.283"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link0right">
+    <inertial>
+      <origin
+        xyz="0.0013425 0.00067056 0.073474"
+        rpy="0 0 0" />
+      <mass
+        value="1.1698" />
+      <inertia
+        ixx="0.0031913"
+        ixy="-4.0011E-05"
+        ixz="7.2686E-05"
+        iyy="0.0032548"
+        iyz="3.6294E-05"
+        izz="0.0015021" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link0right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link0right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint0right"
+    type="fixed">
+    <origin
+      xyz="0.2625 -0.80825 0"
+      rpy="1.5708 0 2.0944" />
+    <parent
+      link="mainbaselink" />
+    <child
+      link="link0right" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link1right">
+    <inertial>
+      <origin
+        xyz="0.00021233 0.0073925 0.085089"
+        rpy="0 0 0" />
+      <mass
+        value="1.3256" />
+      <inertia
+        ixx="0.0039076"
+        ixy="-3.041E-06"
+        ixz="-7.4461E-06"
+        iyy="0.0032369"
+        iyz="-0.00041282"
+        izz="0.0021922" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link1right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link1right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointright"
+    type="revolute">
+    <origin
+      xyz="0 0 0.1548"
+      rpy="0 0 0" />
+    <parent
+      link="link0right" />
+    <child
+      link="link1right" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.283"
+      upper="6.283"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link2right">
+    <inertial>
+      <origin
+        xyz="0.013528 -0.16642 -0.048713"
+        rpy="0 0 0" />
+      <mass
+        value="2.6935" />
+      <inertia
+        ixx="0.015114"
+        ixy="0.0028282"
+        ixz="-0.00014159"
+        iyy="0.0043521"
+        iyz="-0.00072813"
+        izz="0.015671" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link2right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link2right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2right"
+    type="revolute">
+    <origin
+      xyz="0.00034902 0.075295 0.112"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link1right" />
+    <child
+      link="link2right" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.059"
+      upper="2.094"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link3right">
+    <inertial>
+      <origin
+        xyz="0.063373 0.081476 -0.029861"
+        rpy="0 0 0" />
+      <mass
+        value="1.3025" />
+      <inertia
+        ixx="0.0052823"
+        ixy="-0.0012909"
+        ixz="0.00090167"
+        iyy="0.0038844"
+        iyz="0.0016205"
+        izz="0.0044899" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link3right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link3right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3right"
+    type="revolute">
+    <origin
+      xyz="0.053313 -0.2859 -0.0083026"
+      rpy="0 0 0" />
+    <parent
+      link="link2right" />
+    <child
+      link="link3right" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.926"
+      upper="0.192"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link4right">
+    <inertial>
+      <origin
+        xyz="0.00027002 0.032423 0.10205"
+        rpy="0 0 0" />
+      <mass
+        value="0.78956" />
+      <inertia
+        ixx="0.0043745"
+        ixy="3.6114E-06"
+        ixz="2.5887E-06"
+        iyy="0.0039417"
+        iyz="-0.00089191"
+        izz="0.0010383" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link4right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link4right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4right"
+    type="revolute">
+    <origin
+      xyz="0.077751 0.16917 -0.067495"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link3right" />
+    <child
+      link="link4right" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.283"
+      upper="6.283"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link5right">
+    <inertial>
+      <origin
+        xyz="0.048685 0.011108 0.013355"
+        rpy="0 0 0" />
+      <mass
+        value="0.72305" />
+      <inertia
+        ixx="0.00084167"
+        ixy="-0.00021772"
+        ixz="0.00027646"
+        iyy="0.0014546"
+        iyz="7.2753E-05"
+        izz="0.0016685" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link5right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link5right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5right"
+    type="revolute">
+    <origin
+      xyz="0.00043612 0.0047483 0.173"
+      rpy="1.5708 0 0" />
+    <parent
+      link="link4right" />
+    <child
+      link="link5right" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.69"
+      upper="3.142"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="link6right">
+    <inertial>
+      <origin
+        xyz="0.0013911 -8.6367E-09 0.027547"
+        rpy="0 0 0" />
+      <mass
+        value="0.22107" />
+      <inertia
+        ixx="0.00010302"
+        ixy="-1.1511E-11"
+        ixz="-4.5583E-07"
+        iyy="0.00011538"
+        iyz="3.8698E-11"
+        izz="0.00019334" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link6right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/link6right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6right"
+    type="revolute">
+    <origin
+      xyz="0.076 0.0685 0.0043389"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link5right" />
+    <child
+      link="link6right" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.283"
+      upper="6.283"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0.5" />
+  </joint>
+  <link
+    name="linkairbearing1">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 -0.001875 -2.43597822040295E-20"
+        rpy="0 0 0" />
+      <mass
+        value="0.000261799387799149" />
+      <inertia
+        ixx="1.69760540526011E-09"
+        ixy="-8.07063900610767E-42"
+        ixz="-8.41825381448253E-41"
+        iyy="2.6179938779915E-09"
+        iyz="5.97953457190727E-26"
+        izz="1.69760540526011E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/linkairbearing1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/linkairbearing1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointairbearing1"
+    type="continuous">
+    <origin
+      xyz="-0.1 0 0"
+      rpy="3.1416 0 0" />
+    <parent
+      link="mainbaselink" />
+    <child
+      link="linkairbearing1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.283"
+      upper="6.283"
+      effort="5"
+      velocity="5" />
+    <dynamics
+      damping="0" />
+  </joint>
+  <link
+    name="linkairbearing2">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/linkairbearing2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mario_assembly/meshes/linkairbearing2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointairbearing2"
+    type="continuous">
+    <origin
+      xyz="0.1 0 0"
+      rpy="3.1416 0 0" />
+    <parent
+      link="mainbaselink" />
+    <child
+      link="linkairbearing2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.283"
+      upper="6.283"
+      effort="5"
+      velocity="5" />
+  </joint>
+</robot>

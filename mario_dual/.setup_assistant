@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: mario
+    relative_path: urdf/mario.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/mario.srdf
+  CONFIG:
+    author_name: likith kumar
+    author_email: likithkumaryammanuru@gmail.com
+    generated_timestamp: 1681659836

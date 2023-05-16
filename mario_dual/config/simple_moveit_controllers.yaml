@@ -1,0 +1,18 @@
+controller_list:
+  - name: dual_arms_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - joint1_left
+      - joint2_left
+      - joint3_left
+      - joint4_left
+      - joint5_left
+      - joint6_left
+      - joint1_right
+      - joint2_right
+      - joint3_right
+      - joint4_right
+      - joint5_right
+      - joint6_right

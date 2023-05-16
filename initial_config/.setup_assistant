@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: pegasus_description
+    relative_path: urdf/robot_description.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/pegasus.srdf
+  CONFIG:
+    author_name: likith kumar
+    author_email: likithkumaryammanuru@gmail.com
+    generated_timestamp: 1681432243

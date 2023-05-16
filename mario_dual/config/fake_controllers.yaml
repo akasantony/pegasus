@@ -1,0 +1,19 @@
+controller_list:
+  - name: fake_dual_arms_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint1_left
+      - joint2_left
+      - joint3_left
+      - joint4_left
+      - joint5_left
+      - joint6_left
+      - joint1_right
+      - joint2_right
+      - joint3_right
+      - joint4_right
+      - joint5_right
+      - joint6_right
+initial:  # Define initial robot poses per group
+  - group: dual_arms
+    pose: home

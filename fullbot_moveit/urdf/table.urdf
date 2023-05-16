@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="table">
+  <link
+    name="table">
+    <inertial>
+      <origin
+        xyz="0.21 0.61 0.6249"
+        rpy="0 0 0" />
+      <mass
+        value="27.185" />
+      <inertia
+        ixx="6.0131"
+        ixy="-3.1812E-05"
+        ixz="-2.1486E-06"
+        iyy="1.5991"
+        iyz="5.5085E-05"
+        izz="7.4751" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/likith/ws_moveit/src/fullbot_moveit/meshes/table.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/likith/ws_moveit/src/fullbot_moveit/meshes/table.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

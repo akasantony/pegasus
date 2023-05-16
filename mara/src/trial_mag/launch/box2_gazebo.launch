@@ -1,0 +1,10 @@
+<launch>
+
+
+  <param name="box2"
+    command="$(find xacro)/xacro --inorder '$(find trial_mag)/urdf/box2.xacro'" />
+
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+    args="-urdf -model box2 -param box2"/>
+
+</launch>

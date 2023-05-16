@@ -1,0 +1,1250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="fullbot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00237670668945162 0.00109688224125671 0.762061321867194"
+        rpy="0 0 0" />
+      <mass
+        value="83.9918863501521" />
+      <inertia
+        ixx="4.58131435742131"
+        ixy="-3.09418403263941E-10"
+        ixz="0.000336204370522542"
+        iyy="3.15330051931996"
+        iyz="-7.78528789321876E-10"
+        izz="3.71265295574349" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link0_up">
+    <inertial>
+      <origin
+        xyz="0.00152351965279276 -9.20975643461316E-05 0.0721709681332363"
+        rpy="0 0 0" />
+      <mass
+        value="1.15012347681565" />
+      <inertia
+        ixx="0.00305297585598164"
+        ixy="7.49722844279344E-06"
+        ixz="7.88115667134872E-05"
+        iyy="0.00315399366896922"
+        iyz="-4.77295655185554E-06"
+        izz="0.00149595457455531" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link0_up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link0_up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint0_up"
+    type="fixed">
+    <origin
+      xyz="0 0 1.2629"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="link0_up" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link1_up">
+    <inertial>
+      <origin
+        xyz="-0.00635116531185579 0.000207381647010473 0.0933560245185359"
+        rpy="0 0 0" />
+      <mass
+        value="1.3256364074878" />
+      <inertia
+        ixx="0.00337516344067471"
+        ixy="2.91047495398252E-06"
+        ixz="0.000390263321422472"
+        iyy="0.0039707875530841"
+        iyz="-7.74618991821581E-06"
+        izz="0.00211705553045749" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link1_up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link1_up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1_up"
+    type="revolute">
+    <origin
+      xyz="0 0 0.1448"
+      rpy="0 0 0" />
+    <parent
+      link="link0_up" />
+    <child
+      link="link1_up" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link2_up">
+    <inertial>
+      <origin
+        xyz="-0.164334922175455 -0.0131391380189071 -0.0386527377791693"
+        rpy="0 0 0" />
+      <mass
+        value="2.69348731441247" />
+      <inertia
+        ixx="0.00426310623774934"
+        ixy="-0.00277535500543395"
+        ixz="-0.000798338261530704"
+        iyy="0.0150045970572789"
+        iyz="0.000100430735697421"
+        izz="0.0156052703291197" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link2_up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link2_up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2_up"
+    type="revolute">
+    <origin
+      xyz="-0.0652950431339773 0.000349015389753116 0.122000005321613"
+      rpy="3.14159265358979 1.5707963267949 0" />
+    <parent
+      link="link1_up" />
+    <child
+      link="link2_up" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.05"
+      upper="2.09"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link3_up">
+    <inertial>
+      <origin
+        xyz="0.0790017026576337 -0.0622013013556818 -0.0189186889395293"
+        rpy="0 0 0" />
+      <mass
+        value="1.30253510106472" />
+      <inertia
+        ixx="0.00393747848651755"
+        ixy="0.00136510222638933"
+        ixz="0.00159608028913008"
+        iyy="0.00525344165407256"
+        iyz="-0.000920518752882782"
+        izz="0.00455361194720345" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link3_up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link3_up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3_up"
+    type="revolute">
+    <origin
+      xyz="-0.285902778509353 -0.053312933228828 -0.00830262337133821"
+      rpy="0 0 0" />
+    <parent
+      link="link2_up" />
+    <child
+      link="link3_up" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.92"
+      upper="0.19"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link4_up">
+    <inertial>
+      <origin
+        xyz="0.0321807687354634 -0.00025917554824062 0.107627187331176"
+        rpy="0 0 0" />
+      <mass
+        value="0.789560351493029" />
+      <inertia
+        ixx="0.00404949168648296"
+        ixy="-3.36598707087042E-06"
+        ixz="-0.00099079876639351"
+        iyy="0.00449572325717299"
+        iyz="-2.29651540749869E-06"
+        izz="0.00105175547833875" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link4_up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link4_up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4_up"
+    type="revolute">
+    <origin
+      xyz="0.159174227494142 -0.0777509869090924 -0.0574946534887292"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="link3_up" />
+    <child
+      link="link4_up" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link5_up">
+    <inertial>
+      <origin
+        xyz="0.0467464429721703 -0.00940639676845545 -0.0231013060407902"
+        rpy="0 0 0" />
+      <mass
+        value="0.723051769580643" />
+      <inertia
+        ixx="0.000793027726972335"
+        ixy="0.000197964210793357"
+        ixz="-0.000254464226983087"
+        iyy="0.00148592083068407"
+        iyz="5.97819367646225E-05"
+        izz="0.00164704279225573" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link5_up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link5_up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5_up"
+    type="revolute">
+    <origin
+      xyz="0.0147482654558819 -0.000436124905815183 0.182995732412003"
+      rpy="-1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="link4_up" />
+    <child
+      link="link5_up" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.69"
+      upper="3.14"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link6_up">
+    <inertial>
+      <origin
+        xyz="-0.00127764071195329 7.89251114463596E-09 0.0348924628163474"
+        rpy="0 0 0" />
+      <mass
+        value="0.240703496519078" />
+      <inertia
+        ixx="0.000111819933042724"
+        ixy="1.06441768267333E-12"
+        ixz="3.17569406177313E-07"
+        iyy="0.000124185578330655"
+        iyz="-2.44652552338761E-11"
+        izz="0.000199479046718238" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link6_up.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link6_up.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6_up"
+    type="revolute">
+    <origin
+      xyz="0.0758728691169504 -0.0585237361444011 -0.0143389355601516"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="link5_up" />
+    <child
+      link="link6_up" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link0_right">
+    <inertial>
+      <origin
+        xyz="0.00152352214909268 -9.20950558262884E-05 0.072170983394065"
+        rpy="0 0 0" />
+      <mass
+        value="1.15012354839417" />
+      <inertia
+        ixx="0.00305297729491234"
+        ixy="7.49727624531085E-06"
+        ixz="7.88116536111991E-05"
+        iyy="0.00315399502526908"
+        iyz="-4.77312392810153E-06"
+        izz="0.00149595458411752" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link0_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link0_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint0_right"
+    type="fixed">
+    <origin
+      xyz="0 0.2625 0.80825"
+      rpy="3.1416 -1.0472 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="link0_right" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link1_right">
+    <inertial>
+      <origin
+        xyz="-0.00635141038711484 0.000207534921337451 0.0933560223181532"
+        rpy="0 0 0" />
+      <mass
+        value="1.32562534805268" />
+      <inertia
+        ixx="0.0033751569034854"
+        ixy="2.90184699872976E-06"
+        ixz="0.000390274835452127"
+        iyy="0.00397076269428928"
+        iyz="-7.74687080996629E-06"
+        izz="0.00211702052844463" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link1_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link1_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1_right"
+    type="revolute">
+    <origin
+      xyz="0 0 0.1448"
+      rpy="0 0 0" />
+    <parent
+      link="link0_right" />
+    <child
+      link="link1_right" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link2_right">
+    <inertial>
+      <origin
+        xyz="-0.164337985161048 -0.0131393685703512 -0.0386544729786388"
+        rpy="0 0 0" />
+      <mass
+        value="2.69362838096021" />
+      <inertia
+        ixx="0.00426335070454304"
+        ixy="-0.00277555236003664"
+        ixz="-0.000798532633310514"
+        iyy="0.0150051670245593"
+        iyz="0.000100373269271408"
+        izz="0.0156058685529561" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link2_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link2_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2_right"
+    type="revolute">
+    <origin
+      xyz="-0.0652950431339773 0.000349015389753198 0.122000005321614"
+      rpy="3.14159263251637 1.5707963267949 0" />
+    <parent
+      link="link1_right" />
+    <child
+      link="link2_right" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.05"
+      upper="2.09"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link3_right">
+    <inertial>
+      <origin
+        xyz="0.0790018467474999 -0.0622013835327156 -0.0189188081086681"
+        rpy="0 0 0" />
+      <mass
+        value="1.30253291173427" />
+      <inertia
+        ixx="0.00393746472517653"
+        ixy="0.00136509457478538"
+        ixz="0.00159605824936344"
+        iyy="0.00525341640271265"
+        iyz="-0.000920517395001331"
+        izz="0.00455360703799699" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link3_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link3_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3_right"
+    type="revolute">
+    <origin
+      xyz="-0.285902778509353 -0.0533129332288277 -0.0083026233713378"
+      rpy="0 0 0" />
+    <parent
+      link="link2_right" />
+    <child
+      link="link3_right" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.92"
+      upper="0.19"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link4_right">
+    <inertial>
+      <origin
+        xyz="0.0321808159995989 -0.000259192543237335 0.107627165980801"
+        rpy="0 0 0" />
+      <mass
+        value="0.78956108124552" />
+      <inertia
+        ixx="0.00404951021883878"
+        ixy="-3.3674543336446E-06"
+        ixz="-0.000990810460485379"
+        iyy="0.00449575360734708"
+        iyz="-2.29158571071361E-06"
+        izz="0.00105176344238809" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link4_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link4_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4_right"
+    type="revolute">
+    <origin
+      xyz="0.159174227494142 -0.0777509869090924 -0.0574946534887292"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="link3_right" />
+    <child
+      link="link4_right" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link5_right">
+    <inertial>
+      <origin
+        xyz="0.0467464712720566 -0.00940636520692905 -0.0231013135933531"
+        rpy="0 0 0" />
+      <mass
+        value="0.723053236781345" />
+      <inertia
+        ixx="0.000793029275563745"
+        ixy="0.00019796746165297"
+        ixz="-0.000254450161449136"
+        iyy="0.00148592048173132"
+        iyz="5.97839010606921E-05"
+        izz="0.00164706260101592" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link5_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link5_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5_right"
+    type="revolute">
+    <origin
+      xyz="0.0147482654558826 -0.0004361249058151 0.182995732412003"
+      rpy="-1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="link4_right" />
+    <child
+      link="link5_right" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.69"
+      upper="3.14"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link6_right">
+    <inertial>
+      <origin
+        xyz="-0.00127764709875855 8.16060194419599E-09 0.0348924616310335"
+        rpy="0 0 0" />
+      <mass
+        value="0.240703470193428" />
+      <inertia
+        ixx="0.000111819928166232"
+        ixy="-8.53045575245595E-12"
+        ixz="3.17582815697278E-07"
+        iyy="0.000124185592316452"
+        iyz="-2.14504240037665E-11"
+        izz="0.000199479022123197" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link6_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link6_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6_right"
+    type="revolute">
+    <origin
+      xyz="0.0758728691169504 -0.0585237361444011 -0.0143389355601516"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="link5_right" />
+    <child
+      link="link6_right" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link0_left">
+    <inertial>
+      <origin
+        xyz="-0.00152352228347186 9.20948264806314E-05 0.0721709830015318"
+        rpy="0 0 0" />
+      <mass
+        value="1.15012353923379" />
+      <inertia
+        ixx="0.00305297726264137"
+        ixy="7.49728091574788E-06"
+        ixz="-7.88116451994899E-05"
+        iyy="0.00315399499788005"
+        iyz="4.77313793260606E-06"
+        izz="0.00149595457246201" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link0_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link0_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint0_left"
+    type="fixed">
+    <origin
+      xyz="0 -0.262500000000018 0.808253175473086"
+      rpy="3.14159265358979 1.04719755119659 1.57079632679489" />
+    <parent
+      link="base_link" />
+    <child
+      link="link0_left" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link1_left">
+    <inertial>
+      <origin
+        xyz="-0.00635132541827643 0.000207433439637812 0.0933560224157137"
+        rpy="0 0 0" />
+      <mass
+        value="1.32563223880842" />
+      <inertia
+        ixx="0.0033752021374132"
+        ixy="2.88747662063124E-06"
+        ixz="0.000390243275931501"
+        iyy="0.00397075692793721"
+        iyz="-7.76736476127417E-06"
+        izz="0.0021170422993842" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link1_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link1_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1_left"
+    type="revolute">
+    <origin
+      xyz="0 0 0.1448"
+      rpy="0 0 0" />
+    <parent
+      link="link0_left" />
+    <child
+      link="link1_left" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link2_left">
+    <inertial>
+      <origin
+        xyz="-0.164335653200961 -0.0131391438496397 -0.0386534541310813"
+        rpy="0 0 0" />
+      <mass
+        value="2.693519969393" />
+      <inertia
+        ixx="0.00426316968491273"
+        ixy="-0.00277539275843287"
+        ixz="-0.000798412755260658"
+        iyy="0.015004913484326"
+        iyz="0.000100414305662904"
+        izz="0.0156055322063192" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link2_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link2_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2_left"
+    type="revolute">
+    <origin
+      xyz="-0.0652950431339772 0.000349015389753207 0.122000005321613"
+      rpy="3.14159263868863 1.5707963267949 0" />
+    <parent
+      link="link1_left" />
+    <child
+      link="link2_left" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.05"
+      upper="2.09"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link3_left">
+    <inertial>
+      <origin
+        xyz="0.0790016512060432 -0.0622011862834298 -0.0189187307620943"
+        rpy="0 0 0" />
+      <mass
+        value="1.30253713018814" />
+      <inertia
+        ixx="0.00393752557798942"
+        ixy="0.00136512084598024"
+        ixz="0.00159609045475645"
+        iyy="0.00525350026062385"
+        iyz="-0.000920532713824778"
+        izz="0.00455371583746519" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link3_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link3_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3_left"
+    type="revolute">
+    <origin
+      xyz="-0.285902778509353 -0.0533129332288277 -0.00830262337133814"
+      rpy="0 0 0" />
+    <parent
+      link="link2_left" />
+    <child
+      link="link3_left" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.92"
+      upper="0.19"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link4_left">
+    <inertial>
+      <origin
+        xyz="0.0321813918409148 -0.000259353515606797 0.107627755673519"
+        rpy="0 0 0" />
+      <mass
+        value="0.789550324066767" />
+      <inertia
+        ixx="0.00404948831293703"
+        ixy="-3.37071367934128E-06"
+        ixz="-0.000990801773245661"
+        iyy="0.00449572527498313"
+        iyz="-2.29509968742282E-06"
+        izz="0.00105175433912365" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link4_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link4_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4_left"
+    type="revolute">
+    <origin
+      xyz="0.159174227494142 -0.0777509869090924 -0.0574946534887293"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="link3_left" />
+    <child
+      link="link4_left" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link5_left">
+    <inertial>
+      <origin
+        xyz="0.0467460587567171 -0.0094063461555137 -0.0231014499120238"
+        rpy="0 0 0" />
+      <mass
+        value="0.723052791881536" />
+      <inertia
+        ixx="0.000793040035769922"
+        ixy="0.000197992610855098"
+        ixz="-0.000254454983145896"
+        iyy="0.00148594871876037"
+        iyz="5.97820535578688E-05"
+        izz="0.00164710089968391" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link5_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link5_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5_left"
+    type="revolute">
+    <origin
+      xyz="0.0147482654558818 -0.000436124905815183 0.182995732412003"
+      rpy="-1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="link4_left" />
+    <child
+      link="link5_left" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.69"
+      upper="3.14"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+  <link
+    name="link6_left">
+    <inertial>
+      <origin
+        xyz="-0.00127763577348217 7.93220825134888E-09 0.0348924624099836"
+        rpy="0 0 0" />
+      <mass
+        value="0.24070347329952" />
+      <inertia
+        ixx="0.000111819940943311"
+        ixy="-1.15110725035503E-11"
+        ixz="3.1755484877572E-07"
+        iyy="0.0001241855941227"
+        iyz="-3.8707722400089E-11"
+        izz="0.00019947903857224" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link6_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fullbot/meshes/link6_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6_left"
+    type="revolute">
+    <origin
+      xyz="0.0758728691169504 -0.058523736144401 -0.0143389355601514"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="link5_left" />
+    <child
+      link="link6_left" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="20"
+      velocity="1.5" />
+  </joint>
+</robot>

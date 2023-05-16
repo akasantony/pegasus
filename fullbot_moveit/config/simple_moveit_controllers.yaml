@@ -1,0 +1,40 @@
+controller_list:
+  - name: fullbot_armup_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - joint1_up
+      - joint2_up
+      - joint3_up
+      - joint4_up
+      - joint5_up
+      - joint6_up
+  - name: fullbot_base_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - virtual_joint
+  - name: fullbot_armleft_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - joint1_left
+      - joint2_left
+      - joint3_left
+      - joint4_left
+      - joint5_left
+      - joint6_left
+  - name: fullbot_armright_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - joint1_right
+      - joint2_right
+      - joint3_right
+      - joint4_right
+      - joint5_right
+      - joint6_right
